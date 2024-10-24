@@ -1,0 +1,17 @@
+.link {
+	display: inline-block;
+	text-decoration: none;
+	padding: 12px;
+	font-weight: 700;
+	color: var(--white);
+}
+
+@media (prefers-color-scheme: light) {
+	.link {
+		color: var(--dark);
+	}
+}
+
+.active {
+	color: var(--orange);
+}

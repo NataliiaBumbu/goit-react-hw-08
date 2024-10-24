@@ -1,0 +1,23 @@
+.errorContainer {
+	height: 30vh;
+	width: 60vw;
+	margin: 0 auto;
+	border: 1px dashed var(--orange);
+	border-radius: 12px;
+	padding: 20px;
+	display: flex;
+	justify-content: center;
+	place-items: center;
+}
+
+.errorText {
+	text-transform: uppercase;
+	font-size: 1.5em;
+	color: var(--orange);
+}
+
+.errorIcon {
+	width: 10em;
+	height: 10em;
+	color: var(--orange);
+}
