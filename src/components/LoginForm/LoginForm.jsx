@@ -8,7 +8,6 @@ import { login } from '../../redux/auth/operations';
 
 import styles from './LoginForm.module.css';
 
-// Оновлена схема валідації для пароля з мінімумом 6 символів
 const RegistrationSchema = Yup.object().shape({
   email: Yup.string()
     .email('Please enter a valid email')

@@ -8,7 +8,6 @@ import { register } from '../../redux/auth/operations';
 
 import styles from './RegistrationForm.module.css';
 
-// Оновлена схема валідації для пароля з мінімумом 6 символів
 const RegistrationSchema = Yup.object().shape({
 	name: Yup.string()
 		.min(3, 'Name is too Short!')
