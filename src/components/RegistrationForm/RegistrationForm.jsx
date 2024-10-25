@@ -8,18 +8,17 @@ import { register } from '../../redux/auth/operations';
 
 import styles from './RegistrationForm.module.css';
 
-const passwordRules = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}$/;
-
+// Оновлена схема валідації для пароля з мінімумом 6 символів
 const RegistrationSchema = Yup.object().shape({
 	name: Yup.string()
 		.min(3, 'Name is too Short!')
 		.max(50, 'Name is too Long!')
-		.required('Name is Required field!'),
+		.required('Name is required field!'),
 	email: Yup.string()
 		.email('Please enter a valid email')
 		.required('Email is required field!'),
 	password: Yup.string()
-		.matches(passwordRules, 'Password must be at least 5 characters long, include 1 uppercase letter, 1 lowercase letter, and 1 number.')
+		.min(7, 'Password must be at least 6 characters long')  // Мінімум 6 символів
 		.required('Password is required field!'),
 });
 
